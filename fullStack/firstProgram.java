@@ -1,5 +1,5 @@
 package fullStack;
-import java.util.Scanner;
+import java.util.*;
 
 public class firstProgram {
 
