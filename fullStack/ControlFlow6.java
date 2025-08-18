@@ -216,6 +216,59 @@ public class Level3Programs {
         }
     }
 
+     Marks, Percentage, Grade and Remarks Program (updated from screenshot)
+    public static void gradeCalculator() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter marks in Physics: ");
+        int physics = input.nextInt();
+        System.out.print("Enter marks in Chemistry: ");
+        int chemistry = input.nextInt();
+        System.out.print("Enter marks in Maths: ");
+        int maths = input.nextInt();
+
+        int total = physics + chemistry + maths;
+        double percentage = total / 3.0;
+
+        System.out.println("Average Marks: " + percentage + "%");
+
+        if (percentage >= 80) {
+            System.out.println("Grade: A (Level 4, above agency-normalized standards)");
+        } else if (percentage >= 70) {
+            System.out.println("Grade: B (Level 3, at agency-normalized standards)");
+        } else if (percentage >= 60) {
+            System.out.println("Grade: C (Level 2, below but approaching standards)");
+        } else if (percentage >= 50) {
+            System.out.println("Grade: D (Level 1, well below standards)");
+        } else if (percentage >= 40) {
+            System.out.println("Grade: E (Level 1-, too below standards)");
+        } else {
+            System.out.println("Grade: R (Remedial standards)");
+        }
+    }
+
+    BMI Calculator (updated from screenshot)
+    public static void bmiCalculator() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter weight (kg): ");
+        double weight = input.nextDouble();
+        System.out.print("Enter height (cm): ");
+        double heightCm = input.nextDouble();
+
+        double heightM = heightCm / 100;
+        double bmi = weight / (heightM * heightM);
+
+        System.out.println("BMI = " + bmi);
+
+        if (bmi <= 18.4) {
+            System.out.println("Status: Underweight");
+        } else if (bmi <= 24.9) {
+            System.out.println("Status: Normal");
+        } else if (bmi <= 39.9) {
+            System.out.println("Status: Overweight");
+        } else {
+            System.out.println("Status: Obese");
+        }
+    }
     // Main method to call programs manually
     public static void main(String[] args) {
         // Uncomment one at a time to run the desired program
